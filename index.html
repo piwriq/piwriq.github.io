@@ -1,1345 +1,435 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="介绍">
+    <meta name="author" content="D&#39;s Blog">
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
+    <title>
+        
+        D&#39;s Blog
+    </title>
+    
 <link rel="stylesheet" href="/css/style.css">
 
-  
+    <link rel="shortcut icon" href="/images/logo.jpg">
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
-  
-  
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#3399CC","logo":"/images/logo.jpg","favicon":"/images/logo.jpg","avatar":"/images/logo.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"记我所记，记我所想","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"center","copyright_info":true},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+        
+<div class="first-screen-container flex-center fade-in-down-animation">
+    <div class="content flex-center">
+        
+            <div class="description hitokoto">
+                
+                    <div class="desc-item">记我所记，记我所想</div>
+                
+            </div>
+        
+        
+        
+            <div class="s-icon-list">
+                
+                    
+                        
+                        <div class="tooltip s-icon-item "
+                             data-content="GitHub"
+                             data-name="github"
+                             
+                        >
+                            
+                                
+                                    <a target="_blank" href="https://github.com/piwriq">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                
+                            
+                        </div>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </div>
+        
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
+</div>
+
+    
+
+    <div class="page-main-content is-home">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content has-first-screen">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.jpg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               D&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
 </header>
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-优聚集" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/07/09/%E4%BC%98%E8%81%9A%E9%9B%86/" class="article-date">
-  <time class="dt-published" datetime="2023-07-08T18:13:29.663Z" itemprop="datePublished">2023-07-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>JAVA菜鸟教程</td>
-<td><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-tutorial.html">https://www.runoob.com/java/java-tutorial.html</a></td>
-<td></td>
-</tr>
-<tr>
-<td>python菜鸟教程</td>
-<td><a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-basic-syntax.html">https://www.runoob.com/python3/python3-basic-syntax.html</a></td>
-<td></td>
-</tr>
-<tr>
-<td>python廖雪峰教程</td>
-<td><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400">https://www.liaoxuefeng.com/wiki/1016959663602400</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Java廖雪峰教程</td>
-<td><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1252599548343744">https://www.liaoxuefeng.com/wiki/1252599548343744</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Java教程w3school</td>
-<td><a target="_blank" rel="noopener" href="https://www.w3cschool.cn/java/">https://www.w3cschool.cn/java/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>How2J的Java教程</td>
-<td><a target="_blank" rel="noopener" href="https://how2j.cn/">https://how2j.cn/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>编程学习网站推荐</td>
-<td><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/code-website-recommend.html">https://www.runoob.com/w3cnote/code-website-recommend.html</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Demo大师</td>
-<td><a target="_blank" rel="noopener" href="http://www.demodashi.com/#">http://www.demodashi.com/#</a></td>
-<td></td>
-</tr>
-<tr>
-<td>大学资源网</td>
-<td><a target="_blank" rel="noopener" href="http://www.dxzy163.com/">http://www.dxzy163.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>MT论坛</td>
-<td><a target="_blank" rel="noopener" href="https://bbs.binmt.cc/">https://bbs.binmt.cc/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>leaning English</td>
-<td><a target="_blank" rel="noopener" href="https://www.xue8nav.com/sites/44.html/">https://www.xue8nav.com/sites/44.html/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>编程学习</td>
-<td><a target="_blank" rel="noopener" href="https://www.xin3721.com/class2/">https://www.xin3721.com/class2/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>第一教程</td>
-<td><a target="_blank" rel="noopener" href="https://www.diyijc.com/">https://www.diyijc.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>乌云知识库镜像地址</td>
-<td><a target="_blank" rel="noopener" href="https://wooyun.kieran.top/">https://wooyun.kieran.top</a></td>
-<td></td>
-</tr>
-<tr>
-<td>可汗学院</td>
-<td><a target="_blank" rel="noopener" href="https://zh.khanacademy.org/">https://zh.khanacademy.org/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>WikiHow</td>
-<td><a target="_blank" rel="noopener" href="https://zh.wikihow.com/">https://zh.wikihow.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>中国科普博览</td>
-<td><a target="_blank" rel="noopener" href="http://www.kepu.net.cn/">http://www.kepu.net.cn/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>法律咨询</td>
-<td><a target="_blank" rel="noopener" href="https://ai.12348.gov.cn/pc/">https://ai.12348.gov.cn/pc/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>终身教育平台</td>
-<td><a target="_blank" rel="noopener" href="http://le.ouchn.cn/#/home">http://le.ouchn.cn/#/home</a></td>
-<td></td>
-</tr>
-<tr>
-<td>百面网</td>
-<td><a target="_blank" rel="noopener" href="http://www.100mian.com/">http://www.100mian.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>java面试题网</td>
-<td><a target="_blank" rel="noopener" href="http://www.wityx.com/">http://www.wityx.com/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="源码下载网站"><a href="#源码下载网站" class="headerlink" title="源码下载网站"></a>源码下载网站</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>GitHub</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>gitee</td>
-<td><a target="_blank" rel="noopener" href="https://gitee.com/">https://gitee.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>GitHub入门级学习</td>
-<td><a target="_blank" rel="noopener" href="https://www.hellogithub.com/">https://www.hellogithub.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>github学习书籍</td>
-<td><a target="_blank" rel="noopener" href="https://github.com/itbooks1024/books-pdf">https://github.com/itbooks1024/books-pdf</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="视屏学习网站"><a href="#视屏学习网站" class="headerlink" title="视屏学习网站"></a>视屏学习网站</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>BL解析</td>
-<td><a target="_blank" rel="noopener" href="https://vip.bljiex.com/">https://vip.bljiex.com/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="资源搜索网站"><a href="#资源搜索网站" class="headerlink" title="资源搜索网站"></a>资源搜索网站</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>无解搜</td>
-<td><a target="_blank" rel="noopener" href="http://wujiesou.com/">http://wujiesou.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>书签地球</td>
-<td><a target="_blank" rel="noopener" href="https://www.bookmarkearth.com/">https://www.bookmarkearth.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>小森林导航</td>
-<td><a target="_blank" rel="noopener" href="http://www.uziqaq.com/">http://www.uziqaq.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>资源合集网</td>
-<td><a target="_blank" rel="noopener" href="http://www.heji.ltd/">http://www.heji.ltd/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>青春的秘密基地</td>
-<td><a target="_blank" rel="noopener" href="http://qcsuper.ys168.com/">http://qcsuper.ys168.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>万花筒</td>
-<td><a target="_blank" rel="noopener" href="https://wht.im/">https://wht.im/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>虫部落</td>
-<td><a target="_blank" rel="noopener" href="https://search.chongbuluo.com/">https://search.chongbuluo.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>AA导航站</td>
-<td><a target="_blank" rel="noopener" href="http://lackar.com/aa/">http://lackar.com/aa/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>搜奇导航</td>
-<td><a target="_blank" rel="noopener" href="https://www.souqidaohang.com/">https://www.souqidaohang.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>24k导航</td>
-<td><a target="_blank" rel="noopener" href="https://www.24kdh.com/">https://www.24kdh.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>小蛇搜搜</td>
-<td><a target="_blank" rel="noopener" href="https://xiaoshesoso.com/">https://xiaoshesoso.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>爱达杂货铺</td>
-<td><a target="_blank" rel="noopener" href="https://adzhp.cn/">https://adzhp.cn/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>嗯呢的储藏室</td>
-<td><a target="_blank" rel="noopener" href="http://m.ysepan.com/simple#/">http://m.ysepan.com/simple#/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>资源合集网-备用</td>
-<td><a target="_blank" rel="noopener" href="https://233heji.com/">https://233heji.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>资源合集网-发布页</td>
-<td><a target="_blank" rel="noopener" href="https://support.qq.com/products/306417">https://support.qq.com/products/306417</a></td>
-<td></td>
-</tr>
-<tr>
-<td>资源共享吧</td>
-<td><a target="_blank" rel="noopener" href="https://www.zygx8.com/">https://www.zygx8.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>搜网通</td>
-<td><a target="_blank" rel="noopener" href="https://www.s5t.com/">https://www.s5t.com/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="小德子的图书馆"><a href="#小德子的图书馆" class="headerlink" title="小德子的图书馆"></a>小德子的图书馆</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>编程阅读学习</td>
-<td><a target="_blank" rel="noopener" href="http://www.fenby.com/">http://www.fenby.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>点点文档搜索</td>
-<td><a target="_blank" rel="noopener" href="https://www.torrent.org.cn/bd">https://www.torrent.org.cn/bd</a></td>
-<td></td>
-</tr>
-<tr>
-<td>知网</td>
-<td><a target="_blank" rel="noopener" href="https://www.oalib.com/">https://www.oalib.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>科学文库</td>
-<td><a target="_blank" rel="noopener" href="http://book.sciencereading.cn/">http://book.sciencereading.cn/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>最大图书馆</td>
-<td><a target="_blank" rel="noopener" href="https://1lib.net/">https://1lib.net/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>论文换词</td>
-<td><a target="_blank" rel="noopener" href="https://tool.mingdawoo.com/">https://tool.mingdawoo.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>小鱼速读</td>
-<td><a target="_blank" rel="noopener" href="http://www.xysudu.com/">http://www.xysudu.com</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="网页工具"><a href="#网页工具" class="headerlink" title="网页工具"></a>网页工具</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>在线工具网</td>
-<td><a target="_blank" rel="noopener" href="https://www.zxgj.cn/">https://www.zxgj.cn/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>KinhDown</td>
-<td><a target="_blank" rel="noopener" href="https://pan.kdbaidu.com/">https://pan.kdbaidu.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>pdf网页工具</td>
-<td><a target="_blank" rel="noopener" href="https://lightpdf.com/">https://lightpdf.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>工具123</td>
-<td><a target="_blank" rel="noopener" href="http://www.gjw123.com/">http://www.gjw123.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>万有导航</td>
-<td><a target="_blank" rel="noopener" href="http://wanyouw.com/">http://wanyouw.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>性能比较</td>
-<td><a target="_blank" rel="noopener" href="https://versus.com/cn">https://versus.com/cn</a></td>
-<td></td>
-</tr>
-<tr>
-<td>沃克导航</td>
-<td><a target="_blank" rel="noopener" href="http://www.waysto.work/">http://www.waysto.work/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>萌导航</td>
-<td><a target="_blank" rel="noopener" href="https://www.moe123.net/">https://www.moe123.net/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>毒蘑菇搜索</td>
-<td><a target="_blank" rel="noopener" href="https://search.dumogu.top/">https://search.dumogu.top/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>快点搜</td>
-<td><a target="_blank" rel="noopener" href="https://quickso.cn/">https://quickso.cn/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>文献搜索</td>
-<td><a target="_blank" rel="noopener" href="http://www.koovin.com/">http://www.koovin.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>安卓黑科技</td>
-<td><a target="_blank" rel="noopener" href="https://www.appboluo.com/">https://www.appboluo.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Similarsites</td>
-<td><a target="_blank" rel="noopener" href="https://www.similarsites.com/">https://www.similarsites.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>万能格式转换</td>
-<td><a target="_blank" rel="noopener" href="https://cn.office-converter.com/">https://cn.office-converter.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>阿猫阿狗导航</td>
-<td><a target="_blank" rel="noopener" href="https://dh.woshipm.com/">https://dh.woshipm.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>主题美化</td>
-<td><a target="_blank" rel="noopener" href="https://zhutix.com/">https://zhutix.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>爱企查</td>
-<td><a target="_blank" rel="noopener" href="https://aiqicha.baidu.com/">https://aiqicha.baidu.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>工具人</td>
-<td><a target="_blank" rel="noopener" href="https://www.toolfk.com/">https://www.toolfk.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>不思议导航</td>
-<td><a target="_blank" rel="noopener" href="https://orxing.top/nav">https://orxing.top/nav</a></td>
-<td></td>
-</tr>
-<tr>
-<td>奇趣网站</td>
-<td><a target="_blank" rel="noopener" href="https://fuun.fun/">https://fuun.fun/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>工具达人</td>
-<td><a target="_blank" rel="noopener" href="https://dartools.com/">https://dartools.com</a></td>
-<td></td>
-</tr>
-<tr>
-<td>临时邮箱</td>
-<td><a target="_blank" rel="noopener" href="https://tempmail.plus/zh/">https://tempmail.plus/zh/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>ip域名绑定查询</td>
-<td><a target="_blank" rel="noopener" href="https://site.ip138.com/">https://site.ip138.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Jay资源库</td>
-<td><a target="_blank" rel="noopener" href="https://www.lovejay.top/">https://www.lovejay.top/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>学吧导航</td>
-<td><a target="_blank" rel="noopener" href="https://www.xue8nav.com/">https://www.xue8nav.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>知客驿站</td>
-<td><a target="_blank" rel="noopener" href="https://www.zkcee.com/">https://www.zkcee.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>福利吧导航</td>
-<td><a target="_blank" rel="noopener" href="https://fuliba.com/">https://fuliba.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>在线工具</td>
-<td><a target="_blank" rel="noopener" href="https://tool.lu/">https://tool.lu/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>程序员导航</td>
-<td><a target="_blank" rel="noopener" href="https://yinman.youyacao.com/">https://yinman.youyacao.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>万人迷吧</td>
-<td><a target="_blank" rel="noopener" href="http://wanrenmi8.com/">http://wanrenmi8.com</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Tbox导航</td>
-<td><a target="_blank" rel="noopener" href="https://www.tboxn.com/">https://www.tboxn.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>懒得勤快</td>
-<td><a target="_blank" rel="noopener" href="https://masuit.org/">https://masuit.org/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>资源论坛</td>
-<td><a target="_blank" rel="noopener" href="https://btbtt18.com/">https://btbtt18.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>个人技术分享</td>
-<td><a target="_blank" rel="noopener" href="http://www.cxy521.com/">http://www.cxy521.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>软件百科</td>
-<td><a target="_blank" rel="noopener" href="http://dh.wmbk.net/">http://dh.wmbk.net/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>软件分享平台</td>
-<td><a target="_blank" rel="noopener" href="https://www.zdfans.com/">https://www.zdfans.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>微当下载</td>
-<td><a target="_blank" rel="noopener" href="https://www.weidown.com/">https://www.weidown.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>fosshub</td>
-<td><a target="_blank" rel="noopener" href="https://www.fosshub.com/">https://www.fosshub.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>新趣集</td>
-<td><a target="_blank" rel="noopener" href="https://xinquji.com/">https://xinquji.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>小众软件</td>
-<td><a target="_blank" rel="noopener" href="https://www.appinn.com/">https://www.appinn.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>谷歌镜像商店</td>
-<td><a target="_blank" rel="noopener" href="http://www.guandao.cc/">http://www.guandao.cc</a></td>
-<td></td>
-</tr>
-<tr>
-<td>类似软件</td>
-<td><a target="_blank" rel="noopener" href="https://alternativeto.net/">https://alternativeto.net</a></td>
-<td></td>
-</tr>
-<tr>
-<td>SoftwareDownload</td>
-<td><a target="_blank" rel="noopener" href="https://www.filepuma.com/">https://www.filepuma.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>软猫下载</td>
-<td><a target="_blank" rel="noopener" href="https://softmall.net/">https://softmall.net/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>乐见自由（吾爱破解）</td>
-<td><a target="_blank" rel="noopener" href="https://blog.haths.net/">https://blog.haths.net/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>果核剥壳</td>
-<td><a target="_blank" rel="noopener" href="https://www.ghxi.com/">https://www.ghxi.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>辅助狗</td>
-<td><a target="_blank" rel="noopener" href="https://www.fuzhugou.com/">https://www.fuzhugou.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>亿破解</td>
-<td><a target="_blank" rel="noopener" href="https://www.ypojie.com/">https://www.ypojie.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>俄罗斯破解</td>
-<td><a target="_blank" rel="noopener" href="https://rutracker.org/forum/index.php">https://rutracker.org/forum/index.php</a></td>
-<td></td>
-</tr>
-<tr>
-<td>FXXKMAKEDING</td>
-<td><a target="_blank" rel="noopener" href="https://node4.mkdmirror.workers.dev/0:/">https://node4.mkdmirror.workers.dev/0:/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>翻应用</td>
-<td><a target="_blank" rel="noopener" href="https://www.iapps.me/">https://www.iapps.me/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>绿盒下载</td>
-<td><a target="_blank" rel="noopener" href="http://www.42xz.com/">http://www.42xz.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>知了</td>
-<td><a target="_blank" rel="noopener" href="https://zhile.io/">https://zhile.io/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>小白学堂</td>
-<td><a target="_blank" rel="noopener" href="http://www.itmind.net/">http://www.itmind.net/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="系统镜像下载"><a href="#系统镜像下载" class="headerlink" title="系统镜像下载"></a>系统镜像下载</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>原版镜像</td>
-<td><a target="_blank" rel="noopener" href="https://next.itellyou.cn/Original/Index">https://next.itellyou.cn/Original/Index</a></td>
-<td></td>
-</tr>
-<tr>
-<td>MSDN</td>
-<td><a target="_blank" rel="noopener" href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>hellowindows</td>
-<td><a target="_blank" rel="noopener" href="https://hellowindows.cn/">https://hellowindows.cn/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="公众号网站"><a href="#公众号网站" class="headerlink" title="公众号网站"></a>公众号网站</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>神器shop</td>
-<td><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzA5MjcxOTY0Mg==&mid=100001659&idx=1&sn=7fe0beb5f4e207af178b668358441088&chksm=1069980e271e1118a2ce018a8044e96ba73ff40f4bdca04b0bc4af9fdb666df1f913f2a86b41#rd">https://mp.weixin.qq.com/s?__biz=MzA5MjcxOTY0Mg==&amp;mid=100001659&amp;idx=1&amp;sn=7fe0beb5f4e207af178b668358441088&amp;chksm=1069980e271e1118a2ce018a8044e96ba73ff40f4bdca04b0bc4af9fdb666df1f913f2a86b41#rd</a></td>
-<td></td>
-</tr>
-<tr>
-<td>神器store</td>
-<td><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU3MzkxMDc1Mw==&mid=100001866&idx=1&sn=dfbc0b51e3c416b7f23bc33e0c8109bb&chksm=7d3b33c44a4cbad2f469c2f65ff644bb7420ffacd3deefe13e73ef8a08484e4ccf78d69169c9#rd">https://mp.weixin.qq.com/s?__biz=MzU3MzkxMDc1Mw==&amp;mid=100001866&amp;idx=1&amp;sn=dfbc0b51e3c416b7f23bc33e0c8109bb&amp;chksm=7d3b33c44a4cbad2f469c2f65ff644bb7420ffacd3deefe13e73ef8a08484e4ccf78d69169c9#rd</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="网盘资源"><a href="#网盘资源" class="headerlink" title="网盘资源"></a>网盘资源</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>网盘搜索</td>
-<td><a target="_blank" rel="noopener" href="https://m.51caichang.com/">https://m.51caichang.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>酷搜</td>
-<td><a target="_blank" rel="noopener" href="https://www.kolsou.com/">https://www.kolsou.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>玉白盘</td>
-<td><a target="_blank" rel="noopener" href="https://www.yubaipan.com/">https://www.yubaipan.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>云盘狗</td>
-<td><a target="_blank" rel="noopener" href="https://www.yunpangou.com/">https://www.yunpangou.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>懒盘</td>
-<td><a target="_blank" rel="noopener" href="https://disk.misiai.com/">https://disk.misiai.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>56盘</td>
-<td><a target="_blank" rel="noopener" href="https://www.56wangpan.com/">https://www.56wangpan.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>56网盘</td>
-<td><a target="_blank" rel="noopener" href="https://www.56wangpan.com/">https://www.56wangpan.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>阿里小站</td>
-<td><a target="_blank" rel="noopener" href="https://alixiaozhan.net/">https://alixiaozhan.net</a></td>
-<td></td>
-</tr>
-<tr>
-<td>云搜</td>
-<td><a target="_blank" rel="noopener" href="http://www.daysou.com/">http://www.daysou.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>集合1</td>
-<td><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39165280/article/details/108006249">https://blog.csdn.net/qq_39165280/article/details/108006249</a></td>
-<td></td>
-</tr>
-<tr>
-<td>集合2</td>
-<td><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/38323320">https://www.zhihu.com/question/38323320</a></td>
-<td></td>
-</tr>
-<tr>
-<td>集合3</td>
-<td><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60840594?utm_source=wechat_session">https://zhuanlan.zhihu.com/p/60840594?utm_source=wechat_session</a></td>
-<td></td>
-</tr>
-<tr>
-<td>UP云搜</td>
-<td><a target="_blank" rel="noopener" href="https://upyunso3.com/">https://upyunso3.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>阿里大站</td>
-<td><a target="_blank" rel="noopener" href="https://pan.3636360.com/">https://pan.3636360.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>阿里盘搜2</td>
-<td><a target="_blank" rel="noopener" href="https://www.alipansou.com/">https://www.alipansou.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>优聚搜</td>
-<td><a target="_blank" rel="noopener" href="https://ujuso.xwd.pw/">https://ujuso.xwd.pw/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>懒盘搜索</td>
-<td><a target="_blank" rel="noopener" href="https://lzpan.com/">https://lzpan.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>盘盘资源</td>
-<td><a target="_blank" rel="noopener" href="https://www.panpanr.com/">https://www.panpanr.com</a></td>
-<td></td>
-</tr>
-<tr>
-<td>好多社区</td>
-<td><a target="_blank" rel="noopener" href="https://haoduo.ink/">https://haoduo.ink/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>学搜搜</td>
-<td><a target="_blank" rel="noopener" href="https://www.xuesousou.com/">https://www.xuesousou.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>薇飞导航</td>
-<td><a target="_blank" rel="noopener" href="https://www.fwfly.com/">https://www.fwfly.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>盘基地</td>
-<td><a target="_blank" rel="noopener" href="https://www.panjd.com/">https://www.panjd.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>易搜</td>
-<td><a target="_blank" rel="noopener" href="https://yiso.fun/">https://yiso.fun/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>UP云搜2</td>
-<td><a target="_blank" rel="noopener" href="https://www.3kfc.com/">https://www.3kfc.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>小白盘</td>
-<td><a target="_blank" rel="noopener" href="https://www.xiaobaipan.com/">https://www.xiaobaipan.com/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="优聚集"><a href="#优聚集" class="headerlink" title="优聚集"></a>优聚集</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>太优秀</td>
-<td><a target="_blank" rel="noopener" href="https://hqd666.ujuji.com/">https://hqd666.ujuji.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>张小晚</td>
-<td><a target="_blank" rel="noopener" href="https://zhangxiaowan.ujuji.com/">https://zhangxiaowan.ujuji.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>菊长导航</td>
-<td><a target="_blank" rel="noopener" href="https://juzhang.ujuji.com/?event_source=timeline&source=timeline&dt_dapp=1">https://juzhang.ujuji.com/?event_source=timeline&amp;source=timeline&amp;dt_dapp=1</a></td>
-<td></td>
-</tr>
-<tr>
-<td>hao</td>
-<td><a target="_blank" rel="noopener" href="http://hao.ujuji.com/#/">http://hao.ujuji.com/#/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>软件分享</td>
-<td><a target="_blank" rel="noopener" href="https://soft.ujuji.com/">https://soft.ujuji.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>国内外网站</td>
-<td><a target="_blank" rel="noopener" href="https://kim.plopco.com/">https://kim.plopco.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>优聚集公开导航</td>
-<td><a target="_blank" rel="noopener" href="https://nav.ujuji.com/">https://nav.ujuji.com/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="考试网站"><a href="#考试网站" class="headerlink" title="考试网站"></a>考试网站</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>考试酷</td>
-<td><a target="_blank" rel="noopener" href="https://www.examcoo.com/index/ku">https://www.examcoo.com/index/ku</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="资源搜索网站2"><a href="#资源搜索网站2" class="headerlink" title="资源搜索网站2"></a>资源搜索网站2</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>网盘-酷搜</td>
-<td><a target="_blank" rel="noopener" href="https://www.kolsou.com/">https://www.kolsou.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>精品-优搜罗导航</td>
-<td><a target="_blank" rel="noopener" href="https://www.usouluo.com/">https://www.usouluo.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>炫猿导航</td>
-<td><a target="_blank" rel="noopener" href="https://xydh.fun/xungeer">https://xydh.fun/xungeer</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>oeasy</td>
-<td><a target="_blank" rel="noopener" href="http://oeasy.org/">http://oeasy.org/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>B站公开课知识库</td>
-<td><a target="_blank" rel="noopener" href="https://docs.qq.com/sheet/DRU5MWHZCTHFGQnhM">https://docs.qq.com/sheet/DRU5MWHZCTHFGQnhM</a></td>
-<td></td>
-</tr>
-<tr>
-<td>小纸条</td>
-<td><a target="_blank" rel="noopener" href="https://u.gitcafe.net/">https://u.gitcafe.net/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="办公资源"><a href="#办公资源" class="headerlink" title="办公资源"></a>办公资源</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>壁纸</td>
-<td><a target="_blank" rel="noopener" href="https://unsplash.com/">https://unsplash.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>ppt模板</td>
-<td><a target="_blank" rel="noopener" href="https://www.ypppt.com/">https://www.ypppt.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>极简壁纸</td>
-<td><a target="_blank" rel="noopener" href="https://beta.bz.zzzmh.cn/index">https://beta.bz.zzzmh.cn/index</a></td>
-<td></td>
-</tr>
-<tr>
-<td>ppt宝藏</td>
-<td><a target="_blank" rel="noopener" href="http://www.pptbz.com/">http://www.pptbz.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>搜图神器</td>
-<td><a target="_blank" rel="noopener" href="http://soutushenqi.com/">http://soutushenqi.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>hipppt</td>
-<td><a target="_blank" rel="noopener" href="http://www.hippter.com/">http://www.hippter.com</a></td>
-<td></td>
-</tr>
-<tr>
-<td>抠图网站</td>
-<td><a target="_blank" rel="noopener" href="https://www.fococlipping.com/">https://www.fococlipping.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>微软壁纸</td>
-<td><a target="_blank" rel="noopener" href="https://wallpapers.microsoft.design/">https://wallpapers.microsoft.design/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="国内外实时热点"><a href="#国内外实时热点" class="headerlink" title="国内外实时热点"></a>国内外实时热点</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>国外技术</td>
-<td><a target="_blank" rel="noopener" href="https://sciurls.com/">https://sciurls.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>国内热搜</td>
-<td><a target="_blank" rel="noopener" href="https://tophub.today/">https://tophub.today/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>设计排行</td>
-<td><a target="_blank" rel="noopener" href="http://guozhivip.com/rank/">http://guozhivip.com/rank/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>果汁导航</td>
-<td><a target="_blank" rel="noopener" href="http://guozhivip.com/">http://guozhivip.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>今日话题</td>
-<td><a target="_blank" rel="noopener" href="https://bicido.com/#/">https://bicido.com/#/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>往期热点</td>
-<td><a target="_blank" rel="noopener" href="https://www.anyknew.com/#/">https://www.anyknew.com/#/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>鱼塘热榜</td>
-<td><a target="_blank" rel="noopener" href="https://mo.fish/">https://mo.fish/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>知微事见</td>
-<td><a target="_blank" rel="noopener" href="https://ef.zhiweidata.com/">https://ef.zhiweidata.com/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="磁力搜索"><a href="#磁力搜索" class="headerlink" title="磁力搜索"></a>磁力搜索</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>BtHaha</td>
-<td><a target="_blank" rel="noopener" href="https://wangzhi.men/bthaha/">https://wangzhi.men/bthaha/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>1024BT</td>
-<td><a target="_blank" rel="noopener" href="https://102444.gq/">https://102444.gq/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="xxx"><a href="#xxx" class="headerlink" title="xxx"></a>xxx</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>挂了吗</td>
-<td><a target="_blank" rel="noopener" href="https://gualemang.com/">https://gualemang.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>bt聚合</td>
-<td><a target="_blank" rel="noopener" href="https://www.jubt.ml/cn/index.html">https://www.jubt.ml/cn/index.html</a></td>
-<td></td>
-</tr>
-<tr>
-<td>91bt</td>
-<td><a target="_blank" rel="noopener" href="https://91bt.life/">https://91bt.life/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>聚btt</td>
-<td><a target="_blank" rel="noopener" href="https://jubt.live/cn/about.html">https://jubt.live/cn/about.html</a></td>
-<td></td>
-</tr>
-<tr>
-<td>tg搜搜</td>
-<td><a target="_blank" rel="noopener" href="http://www.sssoou.com//">http://www.sssoou.com//</a></td>
-<td></td>
-</tr>
-<tr>
-<td>福利吧</td>
-<td><a target="_blank" rel="noopener" href="https://fuliba-1251744788.file.myqcloud.com/">https://fuliba-1251744788.file.myqcloud.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>网站合集</td>
-<td><a target="_blank" rel="noopener" href="https://www.207788.xyz/">https://www.207788.xyz/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>91bt发布站</td>
-<td><a target="_blank" rel="noopener" href="https://91bt.site/">https://91bt.site/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>1fuli</td>
-<td><a target="_blank" rel="noopener" href="https://1fuli.club/">https://1fuli.club/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>出家如初</td>
-<td><a target="_blank" rel="noopener" href="https://www.yeeach.com/post/1848">https://www.yeeach.com/post/1848</a></td>
-<td></td>
-</tr>
-<tr>
-<td>成佛有余（备用）</td>
-<td><a target="_blank" rel="noopener" href="https://yeeach.me/">https://yeeach.me/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="小德子电影院"><a href="#小德子电影院" class="headerlink" title="小德子电影院"></a>小德子电影院</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>白嫖者联盟</td>
-<td><a target="_blank" rel="noopener" href="https://www.bpzhe.com/">https://www.bpzhe.com/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>叽哩叽哩</td>
-<td><a target="_blank" rel="noopener" href="https://www.jiligamefun.com/">https://www.jiligamefun.com/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="壁纸"><a href="#壁纸" class="headerlink" title="壁纸"></a>壁纸</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>wallhaven</td>
-<td><a target="_blank" rel="noopener" href="https://wallhaven.cc/">https://wallhaven.cc</a></td>
-<td></td>
-</tr>
-<tr>
-<td>彼岸图网</td>
-<td><a target="_blank" rel="noopener" href="http://www.netbian.com/">http://www.netbian.com/</a></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="AZ站"><a href="#AZ站" class="headerlink" title="AZ站"></a>AZ站</h1><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>链接</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>C站</td>
-<td><a target="_blank" rel="noopener" href="https://cilicili.cn/">https://cilicili.cn/</a></td>
-<td></td>
-</tr>
-<tr>
-<td>A站</td>
-<td><a target="_blank" rel="noopener" href="https://www.acfun.cn/">https://www.acfun.cn/</a></td>
-<td></td>
-</tr>
-</tbody></table>
 
-      
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/07/09/hello-world/">
+                        hexo使用教程
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, yo...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Mon Jul 10 2023 00:35:57 GMT+0800">
+                2023-07-10
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/09/%E4%BC%98%E8%81%9A%E9%9B%86/" data-id="cljubrbcy000090utaod93v8e" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
+    <a class="read-more" href="/2023/07/09/hello-world/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
 
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/07/09/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-07-08T17:27:01.808Z" itemprop="datePublished">2023-07-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            </li>
         
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/07/09/hello-world/">Hello World</a>
-    </h1>
-  
+    </ul>
 
-      </header>
+    <div class="home-paginator">
+        <div class="paginator">
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+    
+</div>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/09/hello-world/" data-id="cljua56o20000ukut2i3t9dy6" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
 
+                
+            </div>
 
-  
+        </div>
 
-
-</section>
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2023</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">D&#39;s Blog</a>
+            
+        </div>
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li></ul>
+            <script async 
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/07/09/%E4%BC%98%E8%81%9A%E9%9B%86/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2023/07/09/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
 
+        </div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
     
 
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
 
 
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
 
 
 
 
-<script src="/js/script.js"></script>
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-block.js"></script>
 
 
 
 
 
-  </div>
+<div class="post-scripts">
+    
+</div>
+
+
+
 </body>
 </html>
