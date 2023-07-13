@@ -1,16 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>为什么缩略图与放大图显示不同画面？</title>
-    <url>/2023/07/11/%E4%B8%BA%E4%BB%80%E4%B9%88%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%B8%8E%E6%94%BE%E5%A4%A7%E5%9B%BE%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%90%8C%E7%94%BB%E9%9D%A2%EF%BC%9F/</url>
-    <content><![CDATA[<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a><strong>原理</strong></h2><p>PNG格式的图片，它背景是透明的，然而在QQ或贴吧某些地方，当它是缩略图时，背景是白色的，当你点击打开放大后，背景是黑色，你只要控制这张PNG在白色背景和黑色背景下显示不同的图像就可以了，可以从<code>PS</code>和<code>code</code>两方面去制作。</p>
+    <title>Markdown语法大全及快捷键</title>
+    <url>/2023/07/13/Markdown%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8/</url>
+    <content><![CDATA[<h1 id="一、语法"><a href="#一、语法" class="headerlink" title="一、语法"></a>一、语法</h1><h2 id="1、Markdown标题——提升标题等级ctrl"><a href="#1、Markdown标题——提升标题等级ctrl" class="headerlink" title="1、Markdown标题——提升标题等级ctrl +"></a>1、Markdown标题——提升标题等级ctrl +</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line"></span><br><span class="line">## 二级标题</span><br><span class="line"></span><br><span class="line">### 三级标题</span><br><span class="line"></span><br><span class="line">#### 四级标题</span><br><span class="line"></span><br><span class="line">##### 五级标题</span><br><span class="line"></span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、Markdown字体"><a href="#2、Markdown字体" class="headerlink" title="2、Markdown字体"></a>2、Markdown字体</h2><ul>
+<li>用1个星号*或底线_表示斜体    <strong>斜体：*Ctrl+I*</strong></li>
+<li>用2个星号*或底线_表示粗体    <strong>加粗：Ctrl+B</strong></li>
+<li>用3个星号*或底线_表示粗斜体</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">*斜体文字*</span><br><span class="line"></span><br><span class="line">_斜体文字_</span><br><span class="line"></span><br><span class="line">**粗体文字**</span><br><span class="line"></span><br><span class="line">__粗体文字__</span><br><span class="line"></span><br><span class="line">***粗斜体文字***</span><br><span class="line"></span><br><span class="line">___粗斜体文字___</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、Markdown分割线"><a href="#3、Markdown分割线" class="headerlink" title="3、Markdown分割线"></a>3、Markdown分割线</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">******</span><br><span class="line">------</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、Markdown删除线-——-删除线：Alt-Shift-5"><a href="#4、Markdown删除线-——-删除线：Alt-Shift-5" class="headerlink" title="4、Markdown删除线  ——  删除线：Alt+Shift+5"></a>4、Markdown删除线  ——  删除线：Alt+Shift+5</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">~~tencent.com~~</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、代码块-——-代码：Ctrl-Shift-96"><a href="#5、代码块-——-代码：Ctrl-Shift-96" class="headerlink" title="5、代码块 —— 代码：Ctrl+Shift+&#96;"></a>5、代码块 —— 代码：Ctrl+Shift+&#96;</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">`world`</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、Markdown下划线-——-下划线：Ctrl-U"><a href="#6、Markdown下划线-——-下划线：Ctrl-U" class="headerlink" title="6、Markdown下划线 —— 下划线：Ctrl+U"></a>6、Markdown下划线 —— 下划线：Ctrl+U</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;/u&gt;   </span><br></pre></td></tr></table></figure>
+
+<h2 id="7、Markdown列表"><a href="#7、Markdown列表" class="headerlink" title="7、Markdown列表"></a>7、Markdown列表</h2><p>无序列表(三个都行）</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
+
+<p>有序列表直接在文字有加上1. 2. 3. 来表示，符号和文字之间加上一个空格字符。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
+
+<h2 id="8、Markdown嵌套列表"><a href="#8、Markdown嵌套列表" class="headerlink" title="8、Markdown嵌套列表"></a>8、Markdown嵌套列表</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
+
+<h2 id="9、Markdown链接"><a href="#9、Markdown链接" class="headerlink" title="9、Markdown链接"></a>9、Markdown链接</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">这是一个链接 [新浪新闻](https://news.sina.com.cn/)</span><br><span class="line">&lt;https://news.sina.com.cn/&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="10、Markdown图片-——-图像：Ctrl-Shift-I"><a href="#10、Markdown图片-——-图像：Ctrl-Shift-I" class="headerlink" title="10、Markdown图片 —— 图像：Ctrl+Shift+I"></a>10、Markdown图片 —— 图像：Ctrl+Shift+I</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="11、Markdown表格-——-ctrl-T-插入表格"><a href="#11、Markdown表格-——-ctrl-T-插入表格" class="headerlink" title="11、Markdown表格 —— ctrl + T 插入表格"></a>11、Markdown表格 —— ctrl + T 插入表格</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :-----| ----: | :----: |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line"></span><br><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
+
+<h2 id="12、Markdown引用"><a href="#12、Markdown引用" class="headerlink" title="12、Markdown引用"></a>12、Markdown引用</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&gt; 引用内容</span><br></pre></td></tr></table></figure>
+
+<h2 id="13、Markdown-图标"><a href="#13、Markdown-图标" class="headerlink" title="13、Markdown 图标"></a>13、Markdown 图标</h2><p>效果如下：</p>
+<p>彩虹	 	&amp;#x1F308;	草莓	 	&amp;#x1F353;</p>
+<p>电话	 	&amp;#x1F4DE;	枫叶	 	&amp;#x1F341;</p>
+<p>脚印	 	&amp;#x1F463;	喇叭	 	&amp;#x1F4E3;</p>
+<p>拇指	 	&amp;#x1F44D;	ok	 	&amp;#x1F44C;</p>
+<p>红苹果	 	&amp;#x1F34E;	青苹果	 	&amp;#x1F34F;</p>
+<p>日期	 	&amp;#x1F4C6;	日期	 	&amp;#x1F4C5;</p>
+<p>时间	 	&amp;#x1F554;	手指	 	&amp;#x1F449;</p>
+<p>统计	 	&amp;#x1F4CA;	问号	❓	&amp;#x2753;</p>
+<p>文件夹	 	&amp;#x1F4C2;	西瓜	 	&amp;#x1F349;</p>
+<p>邮箱	 	&amp;#x1F4E7;	直播	 	&amp;#x1F3A6;</p>
+<p>火箭	 	&amp;#x1F680;	可	 	&amp;#x1F251;</p>
+<p>雪人	⛄	&amp;#x26C4;	冠军	 	&amp;#x1F3C6;</p>
+<p>爱心	 	&amp;#x1F493;	伤心	 	&amp;#x1F494;</p>
+<p>爱心	 	&amp;#x1F496;	主意	 	&amp;#x1F4A1;</p>
+<h1 id="二、快捷键"><a href="#二、快捷键" class="headerlink" title="二、快捷键"></a>二、快捷键</h1><h2 id="1、文件"><a href="#1、文件" class="headerlink" title="1、文件"></a>1、文件</h2><p>新建：Ctrl+N</p>
+<p>新建窗口：Ctrl+Shift+N</p>
+<p>打开：Ctrl+O</p>
+<p>快速打开：Ctrl+P</p>
+<p>保存：Ctrl+S</p>
+<p>另存为：Ctrl+Shift+S</p>
+<p>偏好：Ctrl+,</p>
+<p>关闭：Ctrl+W</p>
+<h2 id="2、编辑"><a href="#2、编辑" class="headerlink" title="2、编辑"></a>2、编辑</h2><p>撤销：Ctrl+Z</p>
+<p>重做：Ctrl+Y</p>
+<p>剪切：Ctrl+X</p>
+<p>复制：Ctrl+C</p>
+<p>粘贴：Ctrl+V</p>
+<p>全选：Ctrl+A</p>
+<p>选中当前行&#x2F;句：Ctrl+L</p>
+<p>选中当前格式文本：Ctrl+E</p>
+<p>选中当前词：Ctrl+D</p>
+<p>跳转到文首：Ctrl+Home</p>
+<p>跳转到所选内容：Ctrl+J</p>
+<p>跳转到文末：Ctrl+End</p>
+<p>查找：Ctrl+F</p>
+<p>查找下一个：F3</p>
+<p>查找上一个：Shift+F3</p>
+<p>替换：Ctrl+H</p>
+<h2 id="3、段落"><a href="#3、段落" class="headerlink" title="3、段落"></a>3、段落</h2><ul>
+<li><strong>标题：Ctrl+1&#x2F;2&#x2F;3&#x2F;4&#x2F;5</strong></li>
+<li><strong>段落：Ctrl+0</strong></li>
+<li><strong>增大标题级别：Ctrl+&#x3D;</strong></li>
+<li><strong>减少标题级别：Ctrl±</strong></li>
+<li>表格：Ctrl+T</li>
+<li>代码块：Ctrl+Shift+K</li>
+<li>公式块：Ctrl+Shift+M</li>
+<li>引用：Ctrl+Shift+Q</li>
+<li><strong>有序列表：Ctrl+Shift+[</strong></li>
+<li><strong>无序列表：Ctrl+Shift+]</strong></li>
+<li><strong>增加缩进：Ctrl+]</strong></li>
+<li><strong>减少缩进：Ctrl+[</strong></li>
+</ul>
+<h2 id="4、格式"><a href="#4、格式" class="headerlink" title="4、格式"></a>4、格式</h2><ol>
+<li><strong>加粗：Ctrl+B</strong></li>
+<li><strong>斜体：*Ctrl+I*</strong></li>
+<li><strong>下划线：Ctrl+U</strong></li>
+<li><strong>代码：Ctrl+Shift+&#96;</strong></li>
+<li><strong>删除线：Alt+Shift+5</strong></li>
+<li><strong><a class="link"   href="https://www.piwriq.tk/" >超链接：Ctrl+K<i class="fas fa-external-link-alt"></i></a></strong></li>
+<li><strong>图像：Ctrl+Shift+I</strong></li>
+<li><strong>清除样式：Ctrl+</strong></li>
+</ol>
 ]]></content>
       <categories>
         <category>随笔</category>
       </categories>
-      <tags>
-        <tag>技术</tag>
-      </tags>
   </entry>
   <entry>
     <title>first</title>
