@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Linux管理后台进程常用命令</title>
+    <url>/2023/07/16/Linux%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="Linux管理后台进程常用命令"><a href="#Linux管理后台进程常用命令" class="headerlink" title="Linux管理后台进程常用命令"></a>Linux管理后台进程常用命令</h2><h4 id="1-运行任务（以a-sh文件为例）"><a href="#1-运行任务（以a-sh文件为例）" class="headerlink" title="1.运行任务（以a.sh文件为例）"></a>1.运行任务（以<code>a.sh</code>文件为例）</h4><blockquote>
+<ul>
+<li>简单运行文件</li>
+</ul>
+<p> 将进程运行到前台，<code>./a.sh</code>。</p>
+<ul>
+<li>&amp; 命令</li>
+</ul>
+<p> 将进程运行到后台，进程会随着运行窗口的关闭自动终止运行：<code>./a.sh &amp;</code>。</p>
+<ul>
+<li><strong>nohup</strong>命令</li>
+</ul>
+<p> 关闭运行窗口的同时，进程会继续运行在后台：<code>nohup ./a.sh &amp;</code>。</p>
+</blockquote>
+<h4 id="2-查看当前后台运行的命令"><a href="#2-查看当前后台运行的命令" class="headerlink" title="2.查看当前后台运行的命令"></a>2.查看当前后台运行的命令</h4><blockquote>
+<ul>
+<li><p><strong>jobs</strong>命令</p>
+<p>查看当前后台运行的任务，<code>jobs -l</code>选项可显示当前终端所有任务的PID，jobs的状态可以是<code>running</code>，<code>stopped</code>，<code>Terminated</code>。+ 号表示当前任务，- 号表示后一个任务。</p>
+</li>
+<li><p><strong>ps</strong>命令</p>
+<p>查看当前的所有进程，<code>ps -aux | grep &quot;test&quot;</code>筛选出进程名为test的进程，参数<code>a</code>显示所有程序，<code>u</code>以用户为主的格式来显示，x显示所有程序，不以终端机或窗口来区分。</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="3-关闭当前后台运行的命令"><a href="#3-关闭当前后台运行的命令" class="headerlink" title="3.关闭当前后台运行的命令"></a>3.关闭当前后台运行的命令</h4><blockquote>
+<ul>
+<li><p><strong>kill</strong>命令</p>
+<p>结束进程，通过jobs命令查看jobnum，然后执行  <code>kill jobnum</code>，通过ps命令查看进程号PID，然后执行  <code>kill PID</code>，如果是前台进程的话，直接执行 Ctrl+c 就可以终止了。</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="4-前后台进程的切换与控制"><a href="#4-前后台进程的切换与控制" class="headerlink" title="4.前后台进程的切换与控制"></a>4.前后台进程的切换与控制</h4><blockquote>
+<ul>
+<li><p><strong>fg</strong>命令</p>
+<p>将后台中的命令调至前台继续运行，如果后台中有多个命令，可以先用jobs查看jobnun，然后用 <code>fg jobnum</code> 将选中的命令调出。</p>
+</li>
+<li><p><strong>Ctrl + z</strong> 命令</p>
+<p>将一个正在前台执行的命令放到后台，并且处于暂停状态。</p>
+</li>
+<li><p><strong>bg</strong>命令</p>
+<p>将一个在后台暂停的命令，变成在后台继续执行，如果后台中有多个命令，可以先用jobs查看jobnum，然后用 <code>bg jobnum</code> 将选中的命令调出继续执行。</p>
+</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>将图片文件转换为base64编码</title>
+    <url>/2023/07/16/%E5%B0%86%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E7%BC%96%E7%A0%81%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%94%A8base64%E7%BC%96%E7%A0%81%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h2 id="将图片文件转换为base64编码，可以直接用base64编码展示图片"><a href="#将图片文件转换为base64编码，可以直接用base64编码展示图片" class="headerlink" title="将图片文件转换为base64编码，可以直接用base64编码展示图片"></a>将图片文件转换为base64编码，可以直接用base64编码展示图片</h2><h4 id="1-运行代码"><a href="#1-运行代码" class="headerlink" title="1.运行代码"></a>1.运行代码</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取image文件的二进制内容，将其转换成base64编码</span></span><br><span class="line"><span class="comment"># 不用图床，将base64编码复制到浏览器或者markdown文档中即可显示图片</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;./first (2).jpg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line"></span><br><span class="line">bs = <span class="built_in">str</span>(base64.b64encode(f.read()), <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">bs = <span class="string">&#x27;data:image/png;base64,&#x27;</span> + bs</span><br><span class="line"><span class="built_in">print</span>(bs)</span><br><span class="line"></span><br><span class="line">f.close()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-展示结果"><a href="#2-展示结果" class="headerlink" title="2.展示结果"></a>2.展示结果</h4><img src='/images/imgTobase.png'>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown语法大全及快捷键</title>
     <url>/2023/07/13/Markdown%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8/</url>
     <content><![CDATA[<h1 id="一、语法"><a href="#一、语法" class="headerlink" title="一、语法"></a>一、语法</h1><h2 id="1、Markdown标题——提升标题等级ctrl"><a href="#1、Markdown标题——提升标题等级ctrl" class="headerlink" title="1、Markdown标题——提升标题等级ctrl +"></a>1、Markdown标题——提升标题等级ctrl +</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line"></span><br><span class="line">## 二级标题</span><br><span class="line"></span><br><span class="line">### 三级标题</span><br><span class="line"></span><br><span class="line">#### 四级标题</span><br><span class="line"></span><br><span class="line">##### 五级标题</span><br><span class="line"></span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
@@ -16,7 +85,7 @@
 
 <h2 id="4、Markdown删除线-——-删除线：Alt-Shift-5"><a href="#4、Markdown删除线-——-删除线：Alt-Shift-5" class="headerlink" title="4、Markdown删除线  ——  删除线：Alt+Shift+5"></a>4、Markdown删除线  ——  删除线：Alt+Shift+5</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">~~tencent.com~~</span><br></pre></td></tr></table></figure>
 
-<h2 id="5、代码块-——-代码：Ctrl-Shift-96"><a href="#5、代码块-——-代码：Ctrl-Shift-96" class="headerlink" title="5、代码块 —— 代码：Ctrl+Shift+&#96;"></a>5、代码块 —— 代码：Ctrl+Shift+&#96;</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">`world`</span><br></pre></td></tr></table></figure>
+<h2 id="5、代码块-——-代码：Ctrl-Shift-96"><a href="#5、代码块-——-代码：Ctrl-Shift-96" class="headerlink" title="5、代码块 —— 代码：Ctrl+Shift+&#96;"></a>5、代码块 —— 代码：Ctrl+Shift+&#96;</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">`world`</span><br><span class="line">```</span><br><span class="line">hello world!</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
 
 <h2 id="6、Markdown下划线-——-下划线：Ctrl-U"><a href="#6、Markdown下划线-——-下划线：Ctrl-U" class="headerlink" title="6、Markdown下划线 —— 下划线：Ctrl+U"></a>6、Markdown下划线 —— 下划线：Ctrl+U</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;/u&gt;   </span><br></pre></td></tr></table></figure>
 
@@ -101,19 +170,27 @@
 </ol>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>随记</category>
       </categories>
   </entry>
   <entry>
     <title>first</title>
     <url>/2023/07/11/first/</url>
-    <content><![CDATA[<p>1</p>
+    <content><![CDATA[<ol>
+<li></li>
+</ol>
 <p><img src='\images\first (1).jpg'></img></p>
-<p>2</p>
+<ol start="2">
+<li></li>
+</ol>
 <p><img src='\images\first (2).jpg'></img></p>
-<p>3</p>
+<ol start="3">
+<li></li>
+</ol>
 <p><img src='\images\first (3).jpg'></img></p>
-<p>4</p>
+<ol start="4">
+<li></li>
+</ol>
 <p><img src='\images\first (4).jpg'></img></p>
 ]]></content>
       <categories>

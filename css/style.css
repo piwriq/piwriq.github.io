@@ -2549,7 +2549,7 @@ pre .javascript .function {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: url("/images/bg.svg") center center/cover no-repeat;
+  background: url("/images/bg (1).jpg") center center/cover no-repeat;
 }
 .first-screen-container .content {
   position: relative;
@@ -2559,14 +2559,14 @@ pre .javascript .function {
   padding-top: 2rem;
 }
 .first-screen-container .content .description {
-  color: var(--text-color-3);
+  color: #fff;
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.8;
   text-align: center;
 }
 .first-screen-container .content .description .desc-item {
-  color: var(--text-color-3);
+  color: #fff;
 }
 @media (max-width: 800px) {
   .first-screen-container .content .description {

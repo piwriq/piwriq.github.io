@@ -22,7 +22,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"}
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#3399CC","logo":"/images/logo.jpg","favicon":"/images/logo.jpg","avatar":"/images/logo.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"记我所记，记我所想","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"center","copyright_info":true},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#3399CC","logo":"/images/logo.jpg","favicon":"/images/logo.jpg","avatar":"/images/logo.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg (1).jpg","description":"记我所记，记我所想","font_color":"#ffffff","hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"center","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
@@ -136,6 +136,14 @@
                     
                         <li class="menu-item">
                             <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
                                href="/tags"
                             >
                                 标签
@@ -186,6 +194,11 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
                        href="/tags">标签</a>
                 </li>
             
@@ -222,6 +235,132 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2023/07/16/%E5%B0%86%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E7%BC%96%E7%A0%81%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%94%A8base64%E7%BC%96%E7%A0%81%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/">
+                        将图片文件转换为base64编码
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        将图片文件转换为base64编码，可以直接用base64编码展示图片1.运行代码123456789101112import base64# 读取image文件的二进制内容，将其转换成base64编码# 不用图床，将base64编码复制到浏览器或者ma...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Sun Jul 16 2023 17:43:07 GMT+0800">
+                2023-07-16
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E9%9A%8F%E8%AE%B0/">随记</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Python/">Python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/2023/07/16/%E5%B0%86%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E7%BC%96%E7%A0%81%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%94%A8base64%E7%BC%96%E7%A0%81%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/07/16/Linux%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                        Linux管理后台进程常用命令
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        Linux管理后台进程常用命令1.运行任务（以a.sh文件为例）
+
+简单运行文件
+
+ 将进程运行到前台，./a.sh。
+
+&amp; 命令
+
+ 将进程运行到后台，进程会随着运行窗口的关闭自动终止运行：./a.sh &amp;。
+
+nohup命令
+
+ ...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Sun Jul 16 2023 16:46:57 GMT+0800">
+                2023-07-16
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E9%9A%8F%E8%AE%B0/">随记</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Linux/">Linux</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/2023/07/16/Linux%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2023/07/13/Markdown%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8/">
                         Markdown语法大全及快捷键
                     </a>
@@ -240,8 +379,8 @@
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Thu Jul 13 2023 22:57:33 GMT+0800">
-                2023-07-13
+            <span class="home-article-date" data-updated="Sun Jul 16 2023 16:45:48 GMT+0800">
+                2023-07-16
             </span>
         </span>
         
@@ -250,7 +389,7 @@
                     
                         <li>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>&nbsp;
+                            <a href="/categories/%E9%9A%8F%E8%AE%B0/">随记</a>&nbsp;
                         </li>
                     
                     
@@ -277,13 +416,21 @@
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        1
+                        
 
-2
 
-3
 
-4
+
+
+
+
+
+
+
+
+
+
+
 
 
                     
@@ -293,8 +440,8 @@
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Jul 11 2023 00:37:33 GMT+0800">
-                2023-07-11
+            <span class="home-article-date" data-updated="Sun Jul 16 2023 15:30:54 GMT+0800">
+                2023-07-16
             </span>
         </span>
         
@@ -480,6 +627,8 @@
     <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
 
 
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/lazyload.js"></script>
 
 
 <div class="post-scripts">

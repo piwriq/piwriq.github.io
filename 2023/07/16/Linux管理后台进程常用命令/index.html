@@ -9,7 +9,7 @@
     
     <title>
         
-            first |
+            Linux管理后台进程常用命令 |
         
         D&#39;s Blog
     </title>
@@ -172,7 +172,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">first</span>
+                <span class="title-hover-animation">Linux管理后台进程常用命令</span>
             </div>
 
             
@@ -194,13 +194,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-07-11 00:25:31</span>
-        <span class="mobile">2023-07-11 00:25</span>
+        <span class="pc">2023-07-16 15:44:03</span>
+        <span class="mobile">2023-07-16 15:44</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-07-16 15:30:54</span>
+        <span class="pc">2023-07-16 16:46:57</span>
     </span>
     
     
@@ -209,7 +209,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/picture/">picture</a>&nbsp;
+                        <a href="/categories/%E9%9A%8F%E8%AE%B0/">随记</a>&nbsp;
                     </li>
                 
             </ul>
@@ -221,7 +221,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/picture/">picture</a>&nbsp;
+                        <a href="/tags/Linux/">Linux</a>&nbsp;
                     </li>
                 
             </ul>
@@ -246,22 +246,50 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <ol>
-<li></li>
-</ol>
-<p><img src='\images\first (1).jpg'></img></p>
-<ol start="2">
-<li></li>
-</ol>
-<p><img src='\images\first (2).jpg'></img></p>
-<ol start="3">
-<li></li>
-</ol>
-<p><img src='\images\first (3).jpg'></img></p>
-<ol start="4">
-<li></li>
-</ol>
-<p><img src='\images\first (4).jpg'></img></p>
+                <h2 id="Linux管理后台进程常用命令"><a href="#Linux管理后台进程常用命令" class="headerlink" title="Linux管理后台进程常用命令"></a>Linux管理后台进程常用命令</h2><h4 id="1-运行任务（以a-sh文件为例）"><a href="#1-运行任务（以a-sh文件为例）" class="headerlink" title="1.运行任务（以a.sh文件为例）"></a>1.运行任务（以<code>a.sh</code>文件为例）</h4><blockquote>
+<ul>
+<li>简单运行文件</li>
+</ul>
+<p> 将进程运行到前台，<code>./a.sh</code>。</p>
+<ul>
+<li>&amp; 命令</li>
+</ul>
+<p> 将进程运行到后台，进程会随着运行窗口的关闭自动终止运行：<code>./a.sh &amp;</code>。</p>
+<ul>
+<li><strong>nohup</strong>命令</li>
+</ul>
+<p> 关闭运行窗口的同时，进程会继续运行在后台：<code>nohup ./a.sh &amp;</code>。</p>
+</blockquote>
+<h4 id="2-查看当前后台运行的命令"><a href="#2-查看当前后台运行的命令" class="headerlink" title="2.查看当前后台运行的命令"></a>2.查看当前后台运行的命令</h4><blockquote>
+<ul>
+<li><p><strong>jobs</strong>命令</p>
+<p>查看当前后台运行的任务，<code>jobs -l</code>选项可显示当前终端所有任务的PID，jobs的状态可以是<code>running</code>，<code>stopped</code>，<code>Terminated</code>。+ 号表示当前任务，- 号表示后一个任务。</p>
+</li>
+<li><p><strong>ps</strong>命令</p>
+<p>查看当前的所有进程，<code>ps -aux | grep &quot;test&quot;</code>筛选出进程名为test的进程，参数<code>a</code>显示所有程序，<code>u</code>以用户为主的格式来显示，x显示所有程序，不以终端机或窗口来区分。</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="3-关闭当前后台运行的命令"><a href="#3-关闭当前后台运行的命令" class="headerlink" title="3.关闭当前后台运行的命令"></a>3.关闭当前后台运行的命令</h4><blockquote>
+<ul>
+<li><p><strong>kill</strong>命令</p>
+<p>结束进程，通过jobs命令查看jobnum，然后执行  <code>kill jobnum</code>，通过ps命令查看进程号PID，然后执行  <code>kill PID</code>，如果是前台进程的话，直接执行 Ctrl+c 就可以终止了。</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="4-前后台进程的切换与控制"><a href="#4-前后台进程的切换与控制" class="headerlink" title="4.前后台进程的切换与控制"></a>4.前后台进程的切换与控制</h4><blockquote>
+<ul>
+<li><p><strong>fg</strong>命令</p>
+<p>将后台中的命令调至前台继续运行，如果后台中有多个命令，可以先用jobs查看jobnun，然后用 <code>fg jobnum</code> 将选中的命令调出。</p>
+</li>
+<li><p><strong>Ctrl + z</strong> 命令</p>
+<p>将一个正在前台执行的命令放到后台，并且处于暂停状态。</p>
+</li>
+<li><p><strong>bg</strong>命令</p>
+<p>将一个在后台暂停的命令，变成在后台继续执行，如果后台中有多个命令，可以先用jobs查看jobnum，然后用 <code>bg jobnum</code> 将选中的命令调出继续执行。</p>
+</li>
+</ul>
+</blockquote>
 
             </div>
 
@@ -271,16 +299,16 @@
 <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li class="post-title">
-            <span class="type">本文标题</span>：<span class="content">first</span>
+            <span class="type">本文标题</span>：<span class="content">Linux管理后台进程常用命令</span>
         </li>
         <li class="post-author">
             <span class="type">本文作者</span>：<span class="content">D&#39;s Blog</span>
         </li>
         <li class="post-time">
-            <span class="type">创建时间</span>：<span class="content">2023-07-11 00:25:31</span>
+            <span class="type">创建时间</span>：<span class="content">2023-07-16 15:44:03</span>
         </li>
         <li class="post-link">
-            <span class="type">本文链接</span>：<span class="content">2023/07/11/first/</span>
+            <span class="type">本文链接</span>：<span class="content">2023/07/16/Linux管理后台进程常用命令/</span>
         </li>
         <li class="post-license">
             <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
@@ -298,7 +326,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/picture/">#picture</a>&nbsp;
+                            <a href="/tags/Linux/">#Linux</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -310,18 +338,33 @@
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2023/07/13/Markdown%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8/"
+                               href="/2023/07/16/%E5%B0%86%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E7%BC%96%E7%A0%81%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%94%A8base64%E7%BC%96%E7%A0%81%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">Markdown语法大全及快捷键</span>
+                                <span class="post-nav-title-item">将图片文件转换为base64编码</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>
                         </div>
                     
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/07/13/Markdown%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Markdown语法大全及快捷键</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
                     
                 </div>
             
@@ -333,7 +376,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">Linux管理后台进程常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%BF%90%E8%A1%8C%E4%BB%BB%E5%8A%A1%EF%BC%88%E4%BB%A5a-sh%E6%96%87%E4%BB%B6%E4%B8%BA%E4%BE%8B%EF%BC%89"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.运行任务（以a.sh文件为例）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.查看当前后台运行的命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%85%B3%E9%97%AD%E5%BD%93%E5%89%8D%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.关闭当前后台运行的命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%89%8D%E5%90%8E%E5%8F%B0%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%88%87%E6%8D%A2%E4%B8%8E%E6%8E%A7%E5%88%B6"><span class="nav-number">1.0.4.</span> <span class="nav-text">4.前后台进程的切换与控制</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
