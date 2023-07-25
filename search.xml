@@ -56,20 +56,6 @@
       </tags>
   </entry>
   <entry>
-    <title>将图片文件转换为base64编码</title>
-    <url>/2023/07/16/%E5%B0%86%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E7%BC%96%E7%A0%81%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%94%A8base64%E7%BC%96%E7%A0%81%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<h2 id="将图片文件转换为base64编码，可以直接用base64编码展示图片"><a href="#将图片文件转换为base64编码，可以直接用base64编码展示图片" class="headerlink" title="将图片文件转换为base64编码，可以直接用base64编码展示图片"></a>将图片文件转换为base64编码，可以直接用base64编码展示图片</h2><h4 id="1-运行代码"><a href="#1-运行代码" class="headerlink" title="1.运行代码"></a>1.运行代码</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取image文件的二进制内容，将其转换成base64编码</span></span><br><span class="line"><span class="comment"># 不用图床，将base64编码复制到浏览器或者markdown文档中即可显示图片</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;./first (2).jpg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line"></span><br><span class="line">bs = <span class="built_in">str</span>(base64.b64encode(f.read()), <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">bs = <span class="string">&#x27;data:image/png;base64,&#x27;</span> + bs</span><br><span class="line"><span class="built_in">print</span>(bs)</span><br><span class="line"></span><br><span class="line">f.close()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="2-展示结果"><a href="#2-展示结果" class="headerlink" title="2.展示结果"></a>2.展示结果</h4><img src='/images/imgTobase.png'>
-]]></content>
-      <categories>
-        <category>随记</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown语法大全及快捷键</title>
     <url>/2023/07/13/Markdown%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8/</url>
     <content><![CDATA[<h1 id="一、语法"><a href="#一、语法" class="headerlink" title="一、语法"></a>一、语法</h1><h2 id="1、Markdown标题——提升标题等级ctrl"><a href="#1、Markdown标题——提升标题等级ctrl" class="headerlink" title="1、Markdown标题——提升标题等级ctrl +"></a>1、Markdown标题——提升标题等级ctrl +</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line"></span><br><span class="line">## 二级标题</span><br><span class="line"></span><br><span class="line">### 三级标题</span><br><span class="line"></span><br><span class="line">#### 四级标题</span><br><span class="line"></span><br><span class="line">##### 五级标题</span><br><span class="line"></span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
@@ -198,6 +184,54 @@
       </categories>
       <tags>
         <tag>picture</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Excel如何实现迭代计算？</title>
+    <url>/2023/07/25/Excel%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%BF%AD%E4%BB%A3%E8%AE%A1%E7%AE%97%EF%BC%9F/</url>
+    <content><![CDATA[<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>真是大冤种，每天工作不可少的内容就是做表格，每天来点新鲜的，今天又增加一项新内容，我每天都要把前一天的数据累加到今天，这要是上百行上千行数据不得疯，于是就有了excel如何迭代计算，简单举例说就是<code>B1=B1+A1</code>，当A1出现变化，自动将B1+A1覆盖B1。</p>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><p>第一种方法（有一点BUG）：</p>
+<blockquote>
+<p>就是简单的在B1单元格输入公式<code>=B1+A1</code>，当你改变A1时，B1也会随之改变，B1进行迭代运算，迭代运算次数可以更改，Excel选项 &gt; 公式 &gt; 计算选项 &gt; 勾选启用迭代计算 &gt; 更改最多迭代次数。</p>
+<img src='/images/exceldiedai.png'>
+
+<p>刚刚说了这种方法有点BUG，虽然是可以迭代计算，但是你不管改动工作簿的任何单元格的值，这个B1单元格也会跟着改变，所以这个达不到我想要的效果。</p>
+</blockquote>
+<p>第二种方法（使用VBA）：</p>
+<blockquote>
+<p>使用 VBA来实现的步骤</p>
+<ol>
+<li>打开<code>.xlsm</code>文件（启用宏的工作簿），按下ALT + F11，打开VBA编辑器。</li>
+<li>在VBA编辑器中，找相应的工作表名称的模块。</li>
+<li>双击对应的工作表模块，编辑VBA代码：  <figure class="highlight vb"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Worksheet_Change(<span class="keyword">ByVal</span> Target <span class="keyword">As</span> Range)</span><br><span class="line">    <span class="keyword">If</span> <span class="built_in">Not</span> Intersect(Target, Range(<span class="string">&quot;A1&quot;</span>)) <span class="built_in">Is</span> <span class="literal">Nothing</span> <span class="keyword">Then</span></span><br><span class="line">    	<span class="comment">&#x27;禁用事件处理，避免进入无限循环</span></span><br><span class="line">        Application.EnableEvents = <span class="literal">False</span></span><br><span class="line">        <span class="comment">&#x27;在B1中累加A1的值</span></span><br><span class="line">        Range(<span class="string">&quot;B1&quot;</span>).Value = Range(<span class="string">&quot;B1&quot;</span>).Value + Target.Value</span><br><span class="line">        <span class="comment">&#x27;重新启用事件处理</span></span><br><span class="line">        Application.EnableEvents = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure></li>
+<li>保存代码，关闭 VBA 编辑器。</li>
+<li>在单元格 B1中输入初始值。</li>
+<li>当你更改 A1 的值时，B1 的值会自动更新，新值会覆盖原来的B1，这就是VBA的迭代计算。</li>
+</ol>
+<p>  原理：在 VBA 代码中，对A1的变化进行监控，当A1发生变化时，自动更新B1的值。通过在工作表的<code>Worksheet_Change</code>事件中检测A2的变化，并根据A2的新值更新B2的值。<code>Application.EnableEvents</code> 用于禁用事件处理，以避免进入无限循环。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>Excel</tag>
+        <tag>表格</tag>
+        <tag>VBA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>将图片文件转换为base64编码</title>
+    <url>/2023/07/16/%E5%B0%86%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E7%BC%96%E7%A0%81%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%94%A8base64%E7%BC%96%E7%A0%81%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h2 id="将图片文件转换为base64编码，可以直接用base64编码展示图片"><a href="#将图片文件转换为base64编码，可以直接用base64编码展示图片" class="headerlink" title="将图片文件转换为base64编码，可以直接用base64编码展示图片"></a>将图片文件转换为base64编码，可以直接用base64编码展示图片</h2><h4 id="1-运行代码"><a href="#1-运行代码" class="headerlink" title="1.运行代码"></a>1.运行代码</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取image文件的二进制内容，将其转换成base64编码</span></span><br><span class="line"><span class="comment"># 不用图床，将base64编码复制到浏览器或者markdown文档中即可显示图片</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;./first (2).jpg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line"></span><br><span class="line">bs = <span class="built_in">str</span>(base64.b64encode(f.read()), <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">bs = <span class="string">&#x27;data:image/png;base64,&#x27;</span> + bs</span><br><span class="line"><span class="built_in">print</span>(bs)</span><br><span class="line"></span><br><span class="line">f.close()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-展示结果"><a href="#2-展示结果" class="headerlink" title="2.展示结果"></a>2.展示结果</h4><img src='/images/imgTobase.png'>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>
