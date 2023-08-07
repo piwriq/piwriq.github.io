@@ -187,6 +187,20 @@
       </tags>
   </entry>
   <entry>
+    <title>将图片文件转换为base64编码</title>
+    <url>/2023/07/16/%E5%B0%86%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E7%BC%96%E7%A0%81%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%94%A8base64%E7%BC%96%E7%A0%81%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h2 id="将图片文件转换为base64编码，可以直接用base64编码展示图片"><a href="#将图片文件转换为base64编码，可以直接用base64编码展示图片" class="headerlink" title="将图片文件转换为base64编码，可以直接用base64编码展示图片"></a>将图片文件转换为base64编码，可以直接用base64编码展示图片</h2><h4 id="1-运行代码"><a href="#1-运行代码" class="headerlink" title="1.运行代码"></a>1.运行代码</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取image文件的二进制内容，将其转换成base64编码</span></span><br><span class="line"><span class="comment"># 不用图床，将base64编码复制到浏览器或者markdown文档中即可显示图片</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;./first (2).jpg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line"></span><br><span class="line">bs = <span class="built_in">str</span>(base64.b64encode(f.read()), <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">bs = <span class="string">&#x27;data:image/png;base64,&#x27;</span> + bs</span><br><span class="line"><span class="built_in">print</span>(bs)</span><br><span class="line"></span><br><span class="line">f.close()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-展示结果"><a href="#2-展示结果" class="headerlink" title="2.展示结果"></a>2.展示结果</h4><img src='/images/imgTobase.png'>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Excel如何实现迭代计算？</title>
     <url>/2023/07/25/Excel%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%BF%AD%E4%BB%A3%E8%AE%A1%E7%AE%97%EF%BC%9F/</url>
     <content><![CDATA[<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>真是大冤种，每天工作不可少的内容就是做表格，每天来点新鲜的，今天又增加一项新内容，我每天都要把前一天的数据累加到今天，这要是上百行上千行数据不得疯，于是就有了excel如何迭代计算，简单举例说就是<code>B1=B1+A1</code>，当A1出现变化，自动将B1+A1覆盖B1。</p>
@@ -221,17 +235,54 @@
       </tags>
   </entry>
   <entry>
-    <title>将图片文件转换为base64编码</title>
-    <url>/2023/07/16/%E5%B0%86%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E7%BC%96%E7%A0%81%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%94%A8base64%E7%BC%96%E7%A0%81%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<h2 id="将图片文件转换为base64编码，可以直接用base64编码展示图片"><a href="#将图片文件转换为base64编码，可以直接用base64编码展示图片" class="headerlink" title="将图片文件转换为base64编码，可以直接用base64编码展示图片"></a>将图片文件转换为base64编码，可以直接用base64编码展示图片</h2><h4 id="1-运行代码"><a href="#1-运行代码" class="headerlink" title="1.运行代码"></a>1.运行代码</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取image文件的二进制内容，将其转换成base64编码</span></span><br><span class="line"><span class="comment"># 不用图床，将base64编码复制到浏览器或者markdown文档中即可显示图片</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;./first (2).jpg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line"></span><br><span class="line">bs = <span class="built_in">str</span>(base64.b64encode(f.read()), <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">bs = <span class="string">&#x27;data:image/png;base64,&#x27;</span> + bs</span><br><span class="line"><span class="built_in">print</span>(bs)</span><br><span class="line"></span><br><span class="line">f.close()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>win7检查更新报错问题</title>
+    <url>/2023/08/08/win7%E6%A3%80%E6%9F%A5%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h4 id="为什么写这个？"><a href="#为什么写这个？" class="headerlink" title="为什么写这个？"></a>为什么写这个？</h4><p>现在还有人用win7吗，除了工作，基本大部分人都使用win10以上了，但是为了工作不得不折腾一下win7系统。我的win7重装后就没更新过，直到公司工作助手的安装需要更新win7的补丁及系统，我去检查更新出现错误了，根据错误提示去微软官网下载了msu补丁文件，安装后还是更新不了，找了许多方法，装了许多补丁，重启好几回都没解决，最后想到使用第三方软件，记录下解决过程。</p>
+<h4 id="失败的原因"><a href="#失败的原因" class="headerlink" title="失败的原因"></a>失败的原因</h4><p>一个重要原因就是网络问题，国内访问微软服务器网速不稳定，有时候能访问，有时候访问不了，更何况更新系统呢，需要下载大量的系统文件，要下到猴年马月。</p>
+<h4 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h4><h6 id="Windows-Update-MiniTool"><a href="#Windows-Update-MiniTool" class="headerlink" title="Windows Update MiniTool"></a>Windows Update MiniTool</h6><p>下载地址：<a class="link"   href="https://piwriq.lanzouy.com/i6DVY14r6tzi" >wumt.zip<i class="fas fa-external-link-alt"></i></a></p>
+<p>一个俄罗斯大神写的第三方Update工具</p>
+<img src='/images/wumt.png'>
 
-<h4 id="2-展示结果"><a href="#2-展示结果" class="headerlink" title="2.展示结果"></a>2.展示结果</h4><img src='/images/imgTobase.png'>
+<p>打开对应软件后按如下步骤使用，之后根文件夹中会出现一个代理（agent）软件，直接打开安装即可，安装好后再次检查更新，就能检查到更新，选择自己需要的补丁及系统文件下载即可。</p>
+<img src='/images/wumt2.png'>
+
+<p>参考如下博客：<a class="link"   href="https://www.cnblogs.com/configure/p/6813739.html" >Windows Update第三方工具概览 - Lambeto - 博客园 (cnblogs.com)<i class="fas fa-external-link-alt"></i></a></p>
 ]]></content>
       <categories>
         <category>随记</category>
       </categories>
       <tags>
-        <tag>Python</tag>
+        <tag>win7</tag>
+        <tag>系统更新</tag>
+        <tag>WindowsUpdateMiniTool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>绕过密码退出或卸载亚信杀毒</title>
+    <url>/2023/08/08/%E7%BB%95%E8%BF%87%E5%AF%86%E7%A0%81%E9%80%80%E5%87%BA%E6%88%96%E5%8D%B8%E8%BD%BD%E4%BA%9A%E4%BF%A1%E6%9D%80%E6%AF%92/</url>
+    <content><![CDATA[<h4 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h4><p>为了安全，公司在工作环境中强制安装亚信安全防毒客户端，这样才能正常使用工作空间，否则登录不进去，但是又舍不得配电脑，需要在自己电脑上装上，卸载还需要密码。</p>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><h6 id="卸载和退出都是一样通过修改注册表绕过密码，在win7正常模式下无法更改注册表，需要到安全模式下。"><a href="#卸载和退出都是一样通过修改注册表绕过密码，在win7正常模式下无法更改注册表，需要到安全模式下。" class="headerlink" title="卸载和退出都是一样通过修改注册表绕过密码，在win7正常模式下无法更改注册表，需要到安全模式下。"></a>卸载和退出都是一样通过修改注册表绕过密码，在win7正常模式下无法更改注册表，需要到安全模式下。</h6><h5 id="1、卸载："><a href="#1、卸载：" class="headerlink" title="1、卸载："></a>1、卸载：</h5><blockquote>
+<p>1、重启，进入安全模式</p>
+<p>2、开始 &gt; 运行 输入regedit 打开注册表界面</p>
+<p>32位系统：将<code>HKEY_LOCAL_MACHINE/SOFTWARE/TrendMicro/pcCillinNTCorp/CurrentVersion/Misc</code>中的<code>Allow Unistall</code>的键属值改为1即可，然后重启电脑后进行卸载。</p>
+<p>64位系统：<code>HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/TrendMicro/PC-illinNTcorp/CurrentVersion/Misc/Allow Uninstall</code>的键属值改为1即可，然后重启电脑后进行卸载。</p>
+</blockquote>
+<h5 id="2、退出："><a href="#2、退出：" class="headerlink" title="2、退出："></a>2、退出：</h5><span style="color:red;">
+这里有个小问题，你在修改使用一段时间后，亚信安全会自动将注册表改回来，这样你还想退出还得去修	改，暂时没找到什么解决方法。
+</span>
+
+<blockquote>
+<p>32位系统：将<code>HKEY_LOCAL_MACHINE/SOFTWARE/TrendMicro/PC-cillinNTCorp/CurrentVersion/Misc/NoPwdProtect</code>键值由0 改为1即可，平常使用就可以任意退出该软件，不需要输入密码。</p>
+<p>64位系统：将<code>HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/TrendMicro/PC-illinNTcorp/CurrentVersion/Misc/NoPwdProtect</code>键值由0 改为1即可，平常使用就可以任意退出该软件，不需要输入密码。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>亚信</tag>
+        <tag>安全</tag>
+        <tag>注册表修改</tag>
       </tags>
   </entry>
 </search>
